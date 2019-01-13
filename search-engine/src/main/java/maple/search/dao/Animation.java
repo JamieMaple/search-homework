@@ -9,7 +9,7 @@ public class Animation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     
-    public String title;
+    private String title;
 
     @Column(name = "origin_name")
     public String originName;
@@ -24,11 +24,11 @@ public class Animation {
     
     public String score;
     
-    public String actors;
+    private String actors;
     
-    public String intro;
+    private String intro;
     
-    public String staff;
+    private String staff;
     
     public String tags;
     
@@ -36,6 +36,39 @@ public class Animation {
     
     public Integer getId() {
         return id;
+    }
+    
+    public String getActors() {
+        return actors;
+    }
+    
+    public void setActors(String actors) {
+        this.actors = actors;
+    }
+    
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    
+    public String getTitle() {
+        return title;
+    }
+    
+    public void setStaff(String staff) {
+        this.staff = staff;
+    }
+    
+    public String getStaff() {
+        return staff;
+    }
+    
+    
+    public void setIntro(String intro) {
+        this.intro = intro;
+    }
+    
+    public String getIntro() {
+        return intro;
     }
 }
 

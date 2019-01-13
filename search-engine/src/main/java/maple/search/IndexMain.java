@@ -32,10 +32,10 @@ public class IndexMain extends CommonIndex implements CommandLineRunner {
         
         doc.add(new StoredField(AnimationIndexField.id, animation.getId()));
         doc.add(new TextField(AnimationIndexField.defaultIndex, animation.tags, Field.Store.YES));
-        doc.add(new TextField(AnimationIndexField.defaultIndex, animation.intro, Field.Store.YES));
-        doc.add(new TextField(AnimationIndexField.defaultIndex, animation.staff, Field.Store.YES));
-        doc.add(new TextField(AnimationIndexField.defaultIndex, animation.actors, Field.Store.YES));
-        doc.add(new TextField(AnimationIndexField.defaultIndex, animation.title, Field.Store.YES));
+        doc.add(new TextField(AnimationIndexField.defaultIndex, animation.getIntro(), Field.Store.YES));
+        doc.add(new TextField(AnimationIndexField.defaultIndex, animation.getStaff(), Field.Store.YES));
+        doc.add(new TextField(AnimationIndexField.defaultIndex, animation.getActors(), Field.Store.YES));
+        doc.add(new TextField(AnimationIndexField.defaultIndex, animation.getTitle(), Field.Store.YES));
         
         try {
             writer.addDocument(doc);

@@ -45,6 +45,8 @@ dependencies {
 
     compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '7.6.0'
 
+    compile group: 'org.apache.lucene', name: 'lucene-highlighter', version: '7.6.0'
+
     compile group: 'org.ansj', name: 'ansj_seg', version: '5.1.6'
 
     compile group: 'org.ansj', name: 'ansj_lucene7_plug', version: '5.1.5.1'
