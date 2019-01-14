@@ -1,0 +1,10 @@
+.search-group {
+  display: flex;
+  align-items: center;
+}
+
+.search-textfield {
+  flex: 1;
+  max-width: 400px;
+  margin-right: 16px;
+}

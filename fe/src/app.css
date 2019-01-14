@@ -1,0 +1,11 @@
+#app {
+  padding: 80px 150px;
+}
+
+.app-title {
+  margin-bottom: 20px;
+}
+
+.highlight-keywords {
+  color: #FF6762;
+}
