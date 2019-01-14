@@ -20,7 +20,7 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 public class AnimationSearcher extends CommonIndex {
-    private static final int pageCount = 20;
+    private static final int pageCount = 100;
     
     private SynonymsRecgnition synonyms = new SynonymsRecgnition();
     

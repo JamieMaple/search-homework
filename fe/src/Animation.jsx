@@ -30,16 +30,15 @@ export default function Animation({ animation }) {
             theme="text-secondary-on-background"
             style={{ marginTop: '-1rem' }}
           >
-            {animation.originName}
+            {animation.originName || '未知'}
           </Typography>
-          <Typography use="body1" tag="div" theme="text-secondary-on-background" dangerouslySetInnerHTML={{ __html: animation.intro }}>
+          <Typography use="body1" tag="div" theme="text-secondary-on-background" dangerouslySetInnerHTML={{ __html: animation.intro || '暂无介绍' }}>
           </Typography>
         </div>
       </CardPrimaryAction>
       <CardActions>
         <CardActionButtons>
-          <CardAction>detail</CardAction>
-          <CardAction onClick={() => { window.open(animation.biliAddress) }}>watch</CardAction>
+          <CardAction onClick={() => { window.open(animation.biliAddress) }}>detail</CardAction>
         </CardActionButtons>
         <CardActionIcons>
           <CardAction

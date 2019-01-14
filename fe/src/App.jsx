@@ -17,12 +17,12 @@ export default class App extends React.Component {
     animations: []
   }
 
-  fetchAnimations = async (keywords) => {
+  fetchAnimations = async (keywords, page = 0) => {
     this.setState(prev => ({
       ...prev,
       loading: true,
     }))
-    const res = await fetch(`${SEARCH_ENTRY}?q=${keywords}`)
+    const res = await fetch(`${SEARCH_ENTRY}?q=${keywords}&page=${page}`)
     const animations = await res.json()
     this.setState(prev => ({
       ...prev,
@@ -30,6 +30,10 @@ export default class App extends React.Component {
       hasSearched: true,
       animations,
     }))
+  }
+
+  appendAnimations = (animations) => {
+    this.setState(prev => ({ ...prev, animations: [...prev.animations, animations] }))
   }
 
   render() {

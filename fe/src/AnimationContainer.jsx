@@ -4,7 +4,7 @@ import Animation from './Animation'
 
 export default function AnimationContainer({ animations }) {
   return (
-    <div class="animation-container" style={{ display: 'flex', flexWrap: 'wrap', marginTop: 22 }}>
+    <div className="animation-container" style={{ display: 'flex', flexWrap: 'wrap', marginTop: 22 }}>
       {
         animations.map(animation => <Animation key={animation.id} animation={animation} />)
       }

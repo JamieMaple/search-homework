@@ -11,6 +11,8 @@ import './search-bar.css'
 export default class SearchBar extends React.Component {
   state = {
     keywords: '',
+    page: 0,
+    fetching: false
   }
 
   changeKeywords = (e) => {
@@ -23,13 +25,15 @@ export default class SearchBar extends React.Component {
   }
 
   handleSearch = () => {
+    const { keywords } = this.state
     if (keywords.trim() === '') {
       return
     }
 
     const { fetchAnimations } = this.props
-    const { keywords } = this.state
-    fetchAnimations(keywords.trim())
+    fetchAnimations(keywords.trim(), 0)
+    // reset
+    this.setState(prev => ({ ...prev, page: 0 }))
   }
 
   render() {
